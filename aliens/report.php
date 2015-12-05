@@ -18,8 +18,7 @@
 
 	$dbc = mysqli_connect("localhost", "alien", "alien", "aliendatabase")
 		or die("Error connecting to MySQL server");
-	$query = "INSERT INTO aliens_abduction" . 
-		"VALUES ('$first_name', '$last_name', '$when', '$how_long', '$how_many', '$description', '$what', '$fang_spotted', '$other', '$emali')";
+	$query = "INSERT INTO aliens_abduction VALUES ('$first_name', '$last_name', '$when', '$how_long', '$how_many', '$description', '$what', '$fang_spotted', '$other', '$emali')";
 	$result = mysqli_query($dbc, $query)
 		or die("Error queryting database");
 	mysqli_close($dbc);
