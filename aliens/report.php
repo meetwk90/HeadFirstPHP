@@ -1,0 +1,31 @@
+<?php
+	$name = $_POST["firstname"] . $_POST["lastname"];
+	$when = $_POST["whenithappened"];
+	$how_long = $_POST["howlong"];
+	$description = $_POST["aliendescription"];
+	$fang_spotted = $_POST["fangspotted"];
+	$email = $_POST["email"];
+	$how_many = $_POST["howmany"];
+	$what = $_POST["whattheydid"];
+	$other = $_POST["other"];
+
+	echo "Thanks for submitting the form.<br />";
+	echo "You were abducted " . $when;
+	echo " and were gone for " . $how_long . "<br />";
+	echo "Number of aliens: " . $how_many . "<br />";
+	echo "Describe them: " . $description . "<br />";
+	echo "The aliens did this: " . $what . "<br />";
+	echo "Was Fang there? " . $fang_spotted . "<br />";
+	echo "Other: " . $other . "<br />";
+	echo "Your email address is: " . $email;
+
+	$to = "1017207277@qq.com";
+	$subject = "Aliens Abducted Me";
+	$msg = "$name was abducted $when and was gone for $how_long.\n" . 
+		"Number of aliens: $how_many\n" . 
+		"Alien description: $description\n" . 
+		"What the did: $what\n" . 
+		"Fang spotted: $fang_spotted\n" . 
+		"Other: $other";
+	mail($to, $subject, $msg, 'From:' . $email);
+?>
