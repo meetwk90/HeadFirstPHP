@@ -11,8 +11,8 @@
 
 <?php
 //	$name = $_POST["firstname"] . $_POST["lastname"];
-	$first_name = $_POST("firstname");
-	$last_name = $_POST("lastname");
+	$first_name = $_POST["firstname"];
+	$last_name = $_POST["lastname"];
 	$when = $_POST["whenithappened"];
 	$how_long = $_POST["howlong"];
 	$description = $_POST["aliendescription"];
